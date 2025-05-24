@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function Todo({ todoData, isFinished, changeFinished, onDelete, onEdit }) {
 
-  // const [finished, setFinished] = useState(isFinished);
+
   const [isEditing, setEdiiting] = useState(false);
   const [editText, setEditText] = useState(todoData);
   return (
@@ -11,8 +11,10 @@ function Todo({ todoData, isFinished, changeFinished, onDelete, onEdit }) {
         type="checkbox"
         checked={isFinished}
         onChange={(e) => {
-          // setFinished(e.target.checked); 
+          // setFinished(e.target.checked);
           changeFinished(e.target.checked);
+          console.log("after click", e.target.checked);
+          
         }}
       />
       {isEditing ? (
@@ -24,7 +26,6 @@ function Todo({ todoData, isFinished, changeFinished, onDelete, onEdit }) {
       ) : (
         <span>{todoData}</span>
       )}
-
       <button
         onClick={() => {
           if (isEditing) {
@@ -35,7 +36,6 @@ function Todo({ todoData, isFinished, changeFinished, onDelete, onEdit }) {
       >
         {!isEditing ? "Edit" : " Save"}
       </button>
-
       <button onClick={onDelete}>delete</button>
     </div>
   );

@@ -62,7 +62,7 @@ This project helps you understand how to manage global state in React using Redu
 
    ```bash
    npm install
-   ```
+
 
 3. Run the app locally
 
@@ -78,14 +78,3 @@ This project helps you understand how to manage global state in React using Redu
 * How to write actions and reducers
 * How to connect components to the store with `useSelector` and `useDispatch`
 * How to structure a scalable React + Redux app
-
----
-
-## 🙋‍♂️ Author
-
-* **Your Name**
-  [Your GitHub Profile](https://github.com/your-username)
-
----
-
-Let me know if you'd like to add screenshots, badges, or contribution instructions! I can help generate those too.

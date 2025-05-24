@@ -1,9 +1,9 @@
-import { useContext, useState } from "react";
-import TodoDispatchContext from "../../context/TodoDispatchContext";
+import {  useState } from "react";
 
-function AddTodo() {
+
+function AddTodo({addTodo}) {
   const [input, setInput] = useState("");
-  const {dispatch} = useContext(TodoDispatchContext)
+
   return (
     <div>
       <input
@@ -14,7 +14,7 @@ function AddTodo() {
       />
       <button
         onClick={() => {
-          dispatch({ type: "add_todo", payload: { todoText: input } });
+          addTodo(input)
           setInput("");
         }}
         disabled={!input.trim()}
